@@ -1,3 +1,8 @@
+body{
+    
+}
+
+
 .hero-body {
   background-image: linear-gradient(180deg, #154cb3 0%, #1db5db 100%);
   transition: all .5s ease-out; 
@@ -14,4 +19,10 @@
 .content {
     text-align: center;
     width: 80px;
+}
+.weather-body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
 }
