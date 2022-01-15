@@ -1,0 +1,8 @@
+.section.has-background-grey.has-text-white-bis {
+    background-image: linear-gradient(rgb(21, 76, 179) 0%, rgb(29, 181, 216) 100%);
+}
+.section.has-background-info {
+    background: linear-gradient(rgb(29, 181, 219) 100%, rgb(29, 181, 219) 100%);
+}
+
+
