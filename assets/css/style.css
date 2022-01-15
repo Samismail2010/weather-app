@@ -15,10 +15,10 @@ body {
 .card {
     background: rgb(43, 44, 44);
     opacity: 0.9;
-    padding: 4em;
+    padding: 2em;
     border-radius: 30px;
     width: 100%; 
-    max-width: 600px;
+    max-width: 580px;
     margin: 0px;
     color: white;
     
@@ -46,6 +46,7 @@ button {
     font-family: 'Open Sans Condensed', sans-serif;
     width: calc(100% - 80px);
     margin: 10px;
+    padding: 7px
 }
 .Search {
     
