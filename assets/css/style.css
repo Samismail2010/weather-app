@@ -1,28 +1,52 @@
-body{
-    
-}
-
-
-.hero-body {
-  background-image: linear-gradient(180deg, #154cb3 0%, #1db5db 100%);
-  transition: all .5s ease-out; 
-}
-.column {
-    margin: 33px;
-    justify-content: center;
-    text-align: center;
-}
-.field {
-    margin: 25px;
-
-}
-.content {
-    text-align: center;
-    width: 80px;
-}
-.weather-body {
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
     display: flex;
     justify-content: center;
-    align-content: center;
-
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: aqua;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    background-size: cover;
+    
+}
+.card {
+    background: rgb(43, 44, 44);
+    opacity: 0.9;
+    padding: 4em;
+    border-radius: 30px;
+    width: 100%; 
+    max-width: 600px;
+    margin: 0px;
+    color: white;
+    
+    
+}
+.city {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    margin: 8px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    
+}
+.search-bar {
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: calc(100% - 80px);
+    margin: 10px;
+}
+.Search {
+    
 }
