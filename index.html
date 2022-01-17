@@ -1,123 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <link rel="stylesheet" href="assets/debug.css"> -->
-  </head>
-  <body>
-      <!-- hero section -->
-    <section class="hero is-small is-light is-bold">
-        <div class="hero-body">
-          <div class="container">
-            <div class="columns is-vcentered">
-                <div class="column is-narrow">
-                  <h1 class="title temperatureFont">Weather Dashboard</h1>
-                </div>
-                <!-- search bar -->
-                <div class="column">
-                  <div class="field has-addons">
-                      <div class="control">
-                        <input class="input-city" type="text" placeholder="Find a city">
-                      </div>
-                      <div class="control">
-                        <a id="search-button" class="button is-info search">Search</a>
-                      </div>
-                    </div>
-                </div>
-                <div class="column recent-cities-container">
-                  <h4>Recently searched cities:</h4>
-                    <div class="buttons recent-cities">
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-    </section>
-    <!-- current weather section -->
-    <section class="section has-background-grey has-text-white-bis">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column">
-            <h2 class="title has-text-white-bis" id="cityMain">City</h2>
-            <h3 class="subtitle has-text-white-bis" id="dateMain">Date</h3>
-          </div>
-          <div class="column">
-            <div class="columns is-vcentered">
-              <div class="column is-narrow">
-                <img id="iconMain" src="#" alt="current weather icon">
-              </div>
-              <div class="column">
-                <p class="is-size-1 temperatureFont"><span id="degreeMain"></span> &#176;F</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="column">
-              <p><b>Humidity: </b><span id="humidityMain"></span></p>
-              <p><b>Wind speed: </b><span id="windMain"></span></p>
-              <p><b>UV index: </b><span id="uvIndexMain"></span></p>
-            </div>
-          </div>
-         </div>
-    </section>
-    <!-- 5 day forcast section -->
-    <section class="section has-background-info">
-      <div class="container">
-        <h2 class="title is-4 is-uppercase temperatureFont has-text-white-ter">5 day forecast</h2>
-        <div class="tile is-ancestor">
-           <!-- forcast cards -->
-          <div id="day1" class="tile is-parent ">
-            <article class="tile is-child box forecastBgrd">
-              <h3 class="title is-5 has-text-link" data-index="0">One</h3>
-              <img src="#" alt="weather icon" class="img0">
-              <p class="subtitle is-2 temperatureFont has-text-white-bis temp0">Subtitle</p>
-              <p class="has-text-white-bis"><b>Humidity: </b><span class="humid0"></span></p>
-            </article>
-          </div>
-          <div id="day2" class="tile is-parent">
-            <article class="tile is-child box forecastBgrd">
-              <h3 class="title is-5 has-text-link" data-index="1">Two</h3>
-              <img src="#" alt="weather icon" class="img1">
-              <p class="subtitle is-2 temperatureFont has-text-white-bis temp1">Subtitle</p>
-              <p class="has-text-white-bis"><b>Humidity: </b><span class="humid1"></span></p>
-            </article>
-          </div>
-          <div id="day3" class="tile is-parent">
-            <article class="tile is-child box forecastBgrd">
-              <h3 class="title is-5 has-text-link" data-index="2">Three</h3>
-              <img src="#" alt="weather icon" class="img2">
-              <p class="subtitle is-2 temperatureFont has-text-white-bis temp2">Subtitle</p>
-              <p class="has-text-white-bis"><b>Humidity: </b><span class="humid2"></span></p>
-            </article>
-          </div>
-          <div id="day4" class="tile is-parent">
-            <article class="tile is-child box forecastBgrd">
-              <h3 class="title is-5 has-text-link" data-index="3">Four</h3>
-              <img src="#" alt="weather icon" class="img3">
-              <p class="subtitle is-2 temperatureFont has-text-white-bis temp3">Subtitle</p>
-              <p class="has-text-white-bis"><b>Humidity: </b><span class="humid3"></span></p>
-            </article>
-          </div>
-          <div id="day5" class="tile is-parent">
-            <article class="tile is-child box forecastBgrd">
-              <h3 class="title is-5 has-text-link" data-index="4">Five</h3>
-              <img src="#" alt="weather icon" class="img4">
-              <p class="subtitle is-2 temperatureFont has-text-white-bis temp4">Subtitle</p>
-              <p class="has-text-white-bis"><b>Humidity: </b><span class="humid4"></span></p>
-            </article>
-          </div>
-        </div>
-      </div>    
-    </section>
+</head>
+<body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="./assets/js/script.js"></script>
-  </body>
+    <!--header-->
+    <div id="header">
+        <h1>Weather Dashboard</h1>
+    </div>
+    
+    <!--main container-->
+    <main class="container-fluid">
+        <div class="row">
+
+            <!--left column - search bar and previously searched cities-->
+            <div id="left-column" class="col-md-3">
+                <form id="search-form">
+                    <h2>Search for a City:</h2>
+                    <input id="user-input" class="form-control" placeholder="Search for a city">
+                    <button type="submit" id="search-button" class="btn btn-sm btn-primary btn-block">Search</button>
+                </form>
+
+                <!--div to hold previous searches-->
+                <div id="previous-searches"></div>
+
+            </div>
+
+            <!--right column - current conditions and future forecast-->
+            <div id="right-column" class="col-md-9">
+                <!--current conditions-->
+                <div id="current-weather-container" class="row border d-none weather-container">
+                    <div class="col">
+                        <h2 id="name-date-img"></h2>
+                        <!--div to hold current weather-->
+                        <div id="current-weather"></div>
+                    </div>
+                </div>
+
+                <!--future forecast for 5 days-->
+                <div class="row" id="forecast-container" class="weather-container">
+                    <h2 class="col-12" id="forecast-title"></h2>
+                    <!--div to hold five day forecast-->
+                    <div class="d-flex flex-wrap" id="forecast-weather">
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
 </html>
