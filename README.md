@@ -17,3 +17,6 @@ This application displays a weather dashboard. This project allows users to sear
 
 
 <img width="991" alt="Screen Shot 2022-01-17 at 9 26 46 PM" src="https://user-images.githubusercontent.com/88996409/149866090-f7d425fb-c40d-40f8-ac5f-41fe641a2a8d.png">
+
+## Link
+https://samismail2010.github.io/weather-app/
